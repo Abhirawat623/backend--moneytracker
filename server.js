@@ -21,7 +21,7 @@ app.get("/",(req,res)=>{
     res.send("hello user")
 });
 
-app.use("api/transactions",transactionRouter);
+app.use("/api",transactionRouter);
 
 // app.listen(PORT,()=>{
 //     console.log("server running")

@@ -4,6 +4,6 @@ const transactionRouter = express.Router();
 
 const transactionHandle = require("../controller/transactionsController");
 
-transactionRouter.route("/").post(transactionHandle)
+transactionRouter.route("/transactions").post(transactionHandle)
 
 module.exports =transactionRouter;
