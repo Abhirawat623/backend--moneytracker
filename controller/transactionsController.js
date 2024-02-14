@@ -9,7 +9,7 @@ const transactionHandle= async(req,res)=>{
             amount:req.body.amount
         })
         
-        const savedTransaction = newTransaction.save();
+        const savedTransaction = await newTransaction.save();
         res.status(200).json(savedTransaction);
     }
     catch(error){
