@@ -13,7 +13,7 @@ post(
             res.json(transactionINDb)
         }
         catch(err){
-            res.json({mrssage:"Transactions can't be added"})
+            res.json({message:"Transactions can't be added"})
         }
      }
 

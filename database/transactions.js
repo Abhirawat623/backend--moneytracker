@@ -1,7 +1,7 @@
 const transactions={
     data:[{
-        description:"",
-        type:"",
+        description:"hello",
+        type:"income",
         amount:0
     }
     ]
