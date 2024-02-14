@@ -2,15 +2,19 @@ const Transaction = require("../models/transaction.model")
 
 const transactionHandle= async(req,res)=>{
     try{
-   const transaction = await Transaction.find({});
-   res.json(transaction);
+    
+        const newTransaction= new Transaction({
+            description: req.body.description,
+            type:req.body.type,
+            amount:req.body.amount
+        })
+        
+        const savedTransaction = newTransaction.save();
+        res.status(200).json(savedTransaction);
     }
-    catch(err){
-        console.log(err);
+    catch(error){
+       res.status(500).json({message:"Error adding transactions"})
     }
-
-
-
 }
 
 module.exports = transactionHandle;
