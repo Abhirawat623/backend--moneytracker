@@ -6,6 +6,7 @@ const connectDb =require("./config/dbcongig");
 //importing routes of transactions
 
 const transactionRouter =require("./routes/transactions.router");
+const transactionDataRouter = require("./routes/transactionData.router")
 //config
 dotenv.config();
 //mongodb conf
@@ -22,6 +23,8 @@ app.get("/",(req,res)=>{
 });
 
 app.use("/api",transactionRouter);
+
+app.use("/api",transactionDataRouter)
 
 // app.listen(PORT,()=>{
 //     console.log("server running")
